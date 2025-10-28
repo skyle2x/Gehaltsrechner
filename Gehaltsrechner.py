@@ -1,10 +1,21 @@
-Studenlohn =input("Bitte dein Stundenlohn eingeben:")
-Tag= 8* int(Studenlohn)
-monat= Tag * 20
-year=monat * 12
+while True:
+    try:
+        stundenlohn = float(input("Geben Sie Ihren Stundenlohn ein: "))
+        if stundenlohn <= 0:
+            print("Fehler: Stundenlohn muss positiv sein. Versuchen Sie es erneut.")
+            continue
+        break
+    except ValueError:
+        print("Fehler: Bitte eine gültige Zahl eingeben.")
+    
 
-print("Dein gehalt beträgt " + str(Studenlohn) + "€")
-print("Du verdients " + str(Tag) + "€" + " pro tag")
-print("Du verdients " + str(monat) + "€ pro monat")
-print("Du verdients " + str(year) + "€ pro Jahr")
-input("Drücke eine beliebige ")
+
+taglohn = stundenlohn * 8
+monatslohn = taglohn * 20  
+jahreslohn = monatslohn * 12  
+
+
+print("Tägliches Einkommen: " + str(taglohn) + " €")
+print("Monatliches Einkommen: " + str(monatslohn) + " €")
+print("Jährliches Einkommen: " + str(jahreslohn) + " €")
+        
